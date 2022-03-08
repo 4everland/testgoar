@@ -1,6 +1,7 @@
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/everFinance/goar v1.4.0 h1:/cgW7wT4oZO/iIvtV8syyF5Gy3VUIJZe1OxoZWhk5zw=
 github.com/everFinance/goar v1.4.0/go.mod h1:x19A2ttl2SbZA0Q9nLBYerKFQiyVgj8doSAhDd505J4=
 github.com/everFinance/gojwk v1.0.0 h1:le/oI2NgXlrqg3MHU6ka+V30EWcD7TD6+Ilh+go7924=
 github.com/everFinance/gojwk v1.0.0/go.mod h1:icXSXsIdpAczlpAtSljQlmABkMTRZENr73KHmo0GOGc=

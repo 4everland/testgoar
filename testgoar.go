@@ -1,6 +1,7 @@
 package testgoar
 
 import (
+	"crypto"
 	"crypto/rsa"
 	"fmt"
 	"github.com/everFinance/goar"
@@ -50,28 +51,25 @@ func Init(wallet *goar.Wallet, autoMine bool)(c *TestGoAr, err error) {
 	}
 	c.RootJWK = key
 
-	if pubKey, err := key.DecodePublicKey(); err == nil {
-		if err != nil {
-			return nil, nil
-		}
-		pub, ok := pubKey.(*rsa.PublicKey)
-		if !ok {
-			return nil, fmt.Errorf("pubKey type error")
-		}
-		c.PubKey = pub
-	} else {
+	var pubKey crypto.PublicKey
+	if pubKey, err = key.DecodePublicKey(); err != nil {
 		return
 	}
+	pub, ok := pubKey.(*rsa.PublicKey)
+	if !ok {
+		return nil, fmt.Errorf("pubKey type error")
+	}
+	c.PubKey = pub
 
-	if prvKey, err := key.DecodePrivateKey(); err == nil {
-		prv, ok := prvKey.(*rsa.PrivateKey)
-		if !ok {
-			return nil,  fmt.Errorf("prvKey type error")
-		}
-		c.PrvKey = prv
-	} else {
+	var prvKey crypto.PrivateKey
+	if prvKey, err = key.DecodePrivateKey(); err != nil {
 		return
 	}
+	prv, ok := prvKey.(*rsa.PrivateKey)
+	if !ok {
+		return nil,  fmt.Errorf("prvKey type error")
+	}
+	c.PrvKey = prv
 
 	return
 }

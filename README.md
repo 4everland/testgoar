@@ -22,7 +22,7 @@ Firstly you need to create a TestWeave instance on the top on an Arweave node, a
 
 ```go
 import (
-    "github/4everland/testgoar/"
+    "github/4everland/testgoar"
     "github.com/everFinance/goar"
 )
 
@@ -57,7 +57,7 @@ To check all the useful helpers that the SDK supplies, checkout the XXX section.
 
 ```go
 import (
-    "github/4everland/testgoar/"
+    "github/4everland/testgoar"
     "github.com/everFinance/goar"
 )
 
